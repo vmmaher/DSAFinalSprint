@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>BST Result</title>
+</head>
+<body>
+    <h1>Binary Search Tree</h1>
+    <p>Input numbers: <span th:text="${numbers}"></span></p>
+    <p>BST In-Order Traversal: <span th:text="${inorder}"></span></p>
+
+    <a th:href="@{/enter-numbers}">Enter another set</a>
+</body>
+</html>
