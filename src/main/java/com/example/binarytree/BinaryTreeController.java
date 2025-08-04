@@ -45,7 +45,6 @@ public class BinaryTreeController {
         }
         List<Integer> inorder = bst.inOrderTraversal();
 
-        // Save to DB
         BSTResult bstResult = new BSTResult(
                 numbers.stream().map(String::valueOf).collect(Collectors.joining(", ")),
                 inorder.stream().map(String::valueOf).collect(Collectors.joining(", "))
