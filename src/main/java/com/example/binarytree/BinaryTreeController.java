@@ -53,6 +53,7 @@ public class BinaryTreeController {
 
         model.addAttribute("numbers", numbers);
         model.addAttribute("inorder", inorder);
+        model.addAttribute("numbersString", numbersInput);
 
         return "result";
     }
