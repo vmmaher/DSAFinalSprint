@@ -10,11 +10,18 @@
             <th>ID</th>
             <th>Input Numbers</th>
             <th>In-Order Traversal</th>
+            <th>JSON</th>
         </tr>
         <tr th:each="result : ${previousTrees}">
             <td th:text="${result.id}"></td>
             <td th:text="${result.inputNumbers}"></td>
             <td th:text="${result.inOrderTraversal}"></td>
+            <td>
+                <form th:action="@{/api/bst}" method="post" target="_blank" style="display:inline;">
+                    <input type="hidden" name="numbers" th:value="${result.inputNumbers}">
+                    <button type="submit">See JSON</button>
+                </form>
+            </td>
         </tr>
     </table>
     <br>

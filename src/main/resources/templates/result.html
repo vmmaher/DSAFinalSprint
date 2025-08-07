@@ -8,6 +8,12 @@
     <p>Input numbers: <span th:text="${numbers}"></span></p>
     <p>BST In-Order Traversal: <span th:text="${inorder}"></span></p>
 
+    <form th:action="@{/api/bst}" method="post" target="_blank">
+        <input type="hidden" name="numbers" th:value="${numbersString}">
+        <button type="submit">See JSON</button>
+    </form>
+
+    <br><br>
     <a th:href="@{/enter-numbers}">Enter another set</a>
 </body>
 </html>
